@@ -4,22 +4,31 @@ import com.xuebusi.po.Order;
 import com.xuebusi.util.ServiceInfoUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class OrderController {
 
+    /**
+     * 测试
+     * @param id
+     * @return
+     */
     @GetMapping("/order/{id}")
-    public String findOrderById(@PathVariable String id) {
-        int i = 1/0;
+    @ResponseBody
+    public Order findOrderById(@PathVariable String id) {
         Order order = new Order();
-        order.setId("123");
-        order.setPrice(23.5);
-        order.setReceiverAddress("北京");
-        order.setReceiverName("张三");
-        order.setReceiverPhone("13966678766");
-        String result = "[机器端口:" + ServiceInfoUtil.getPort() + "][" + order.toString() + "]";
-        System.out.println(result);
-        return result;
+        try {
+            order.setId("123");
+            order.setPrice(23.5);
+            order.setReceiverAddress("北京");
+            order.setReceiverName("张三");
+            order.setReceiverPhone("13966678766");
+            System.out.println("[机器端口:" + ServiceInfoUtil.getPort() + "][" + order.toString() + "]");
+        } catch (Exception e) {
+            System.out.println("=================findOrderById方法调用异常:" + e.toString());
+        }
+        return order;
     }
 }

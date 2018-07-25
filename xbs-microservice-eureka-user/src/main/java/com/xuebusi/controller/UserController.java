@@ -19,7 +19,7 @@ public class UserController {
     }*/
 
     /**
-     * 使用Ribbon进行负载均衡
+     * RestTemplate结合Ribbon实现负载均衡
      * @return
      */
     @GetMapping("/findOrdersByUser/{id}")
