@@ -1,6 +1,8 @@
-package com.xuebusi.po;
+package com.xuebusi.xbs.order.vo;
 
-public class Order {
+import java.io.Serializable;
+
+public class Order implements Serializable {
 
     private String id;
     private Double price;

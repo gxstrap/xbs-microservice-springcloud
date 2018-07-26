@@ -17,7 +17,9 @@
 		<module>xbs-microservice-hystrix-dashboard</module>
 		<module>xbs-microservice-config-server-git</module>
 		<module>xbs-microservice-config-client-git</module>
-	</modules>
+		<module>xbs-microservice-eureka-feign</module>
+        <module>xbs-microservice-common-api</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<parent>

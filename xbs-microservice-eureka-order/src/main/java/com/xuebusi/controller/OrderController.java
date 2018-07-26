@@ -1,7 +1,7 @@
 package com.xuebusi.controller;
 
-import com.xuebusi.po.Order;
 import com.xuebusi.util.ServiceInfoUtil;
+import com.xuebusi.xbs.order.vo.Order;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
