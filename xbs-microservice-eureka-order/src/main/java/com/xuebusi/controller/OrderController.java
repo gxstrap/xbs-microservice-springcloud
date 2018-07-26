@@ -18,6 +18,8 @@ public class OrderController {
     @GetMapping("/order/{id}")
     @ResponseBody
     public Order findOrderById(@PathVariable String id) {
+        //模拟异常测试Hystrix短路器
+        //int i = 1/0;
         Order order = new Order();
         try {
             order.setId("123");
