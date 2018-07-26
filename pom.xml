@@ -19,7 +19,8 @@
 		<module>xbs-microservice-config-client-git</module>
 		<module>xbs-microservice-eureka-feign</module>
         <module>xbs-microservice-common-api</module>
-    </modules>
+		<module>xbs-microservice-zipkin-server</module>
+	</modules>
 	<packaging>pom</packaging>
 
 	<parent>
